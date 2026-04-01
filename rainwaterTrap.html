@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="rainwaterTrap.css">
+	</head>
+	<body>
+		</br></br></br></br>
+		<table id="grid" class="teren" style="border-collapse:collapse;">
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+			</tr>
+		</table>
+		</br>
+		<div class="inputs">
+			<input id="0" type="number" min="0" max="5" value="0" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="1" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="2" type="number" min="0" max="5" value="0" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="3" type="number" min="0" max="5" value="2" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="4" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="5" type="number" min="0" max="5" value="0" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="6" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="7" type="number" min="0" max="5" value="3" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="8" type="number" min="0" max="5" value="2" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="9" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="10" type="number" min="0" max="5" value="2" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="11" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+		</div></br></br>
+		<div class="waterNum">
+			<input id="water" type="number" value="06" autocomplete="off" readonly>
+		</div>
+		<script src="rainwaterTrap.js"></script>
+	</body>
+</html>
