@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+		<style>
+			.teren{
+				display:flex;
+				justify-content:center;
+			}
+			td{
+				border:1px solid black;
+				height:70px;
+				width:70px;
+				user-select:none;
+				cursor:default;
+				outline:none;
+				caret-color:transparent;
+			}
+			.inputs input{
+				text-align:center;
+				width:50px;
+				height:30px;
+				font-size:25px;
+				user-select:none;
+				cursor:default;
+				outline:none;
+				caret-color:transparent;
+			}
+			.inputs input::selection{
+				background:transparent;
+			}
+			.inputs{
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				gap:14.5px;
+			}
+			.waterNum{
+				display:flex;
+				justify-content:center;
+			}
+			.waterNum input{
+				font-family: 'Orbitron', monospace;
+				font-size:80px;
+				color:aqua;
+				background-color: #001F3F;
+				border-radius: 10px;
+				border-color: aqua;
+				text-align:center;
+				height:100px;
+				width:200px;
+				user-select:none;
+				cursor:default;
+				outline:none;
+				caret-color:transparent;
+			}
+			.waterNum input::selection{
+				background:transparent;
+			}
+			.waterNum input[type=number]::-webkit-outer-spin-button,
+			.waterNum input[type=number]::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			.waterNum input[type=number] {
+				-moz-appearance: textfield;
+			}
+		</style>
+	</head>
+	<body>
+		</br></br></br></br>
+		<table id="grid" class="teren" style="border-collapse:collapse;">
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:white">&nbsp</td>
+			</tr>
+			<tr>
+				<td style="background-color:white">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:aqua">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+				<td style="background-color:black">&nbsp</td>
+			</tr>
+		</table>
+		</br>
+		<div class="inputs">
+			<input id="0" type="number" min="0" max="5" value="0" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="1" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="2" type="number" min="0" max="5" value="0" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="3" type="number" min="0" max="5" value="2" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="4" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="5" type="number" min="0" max="5" value="0" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="6" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="7" type="number" min="0" max="5" value="3" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="8" type="number" min="0" max="5" value="2" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="9" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="10" type="number" min="0" max="5" value="2" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+			<input id="11" type="number" min="0" max="5" value="1" onkeydown="return false" onpaste="return false" ondrop="return false" autocomplete="off" oninput="updateMap(this)"></input>
+		</div></br></br>
+		<div class="waterNum">
+			<input id="water" type="number" value="06" autocomplete="off" readonly>
+		</div>
+		<script>
+
+			function getColor(table,row,col){
+				return table.rows[row].cells[col].style.backgroundColor;
+			}
+			function setColor(table,row,col,color){
+				table.rows[row].cells[col].style.backgroundColor=color;
+			}
+			function updateMap(input){
+				const table=document.getElementById("grid");
+				const water=document.getElementById("water");
+				let w = Number(water.value);
+
+				for(let i=table.rows.length-1;i>=table.rows.length-Number(input.value);i--){
+					if(getColor(table,i,Number(input.id)) == "aqua") w--;
+					setColor(table,i,Number(input.id),"black");
+				}
+				for(let i=table.rows.length-Number(input.value)-1;i>=0;i--){
+					if(getColor(table,i,Number(input.id)) == "aqua") w--;
+					setColor(table,i,Number(input.id),"white");
+				}
+
+                for(let i=4;i>=0;i--){
+					for(let j=1;j<11;j++)
+						if(getColor(table,i,j-1)!="white" && getColor(table,i,j)=="white"){setColor(table,i,j,"aqua");w++;}
+					for(let j=10;j>0;j--)
+						if(getColor(table,i,j+1)!="white" && getColor(table,i,j)=="white"){setColor(table,i,j,"aqua");w++;}
+					for(let j=1;j<11;j++)
+						if(getColor(table,i,j)=="aqua" && getColor(table,i,j-1)=="white")
+							{setColor(table,i,j,"white");w--;}
+					for(let j=10;j>0;j--)
+						if(getColor(table,i,j)=="aqua" && getColor(table,i,j+1)=="white")
+							{setColor(table,i,j,"white");w--;}
+				}
+				if (w >= 10)
+					water.value = w;
+					else water.value = '0' + w;
+			}
+		</script>
+	</body>
+</html>
